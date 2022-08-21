@@ -1,4 +1,8 @@
 {
+  "editor.fontFamily": "'Roboto Mono Nerd Font', monospace",
+  "editor.experimental.stickyScroll.enabled": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 56,
   "workbench.colorTheme": "SynthWave '84",
   "bracket-pair-colorizer-2.depreciation-notice": false,
   "[javascript]": {
