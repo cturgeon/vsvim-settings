@@ -1,13 +1,31 @@
 {
-  "editor.fontFamily": "'Roboto Mono Nerd Font', monospace",
-  "editor.experimental.stickyScroll.enabled": true,
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 56,
-  "workbench.colorTheme": "SynthWave '84",
-  "bracket-pair-colorizer-2.depreciation-notice": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "markiscodecoverage.enableOnStartup": true,
+  "coverage-gutters.coverageFileNames": [
+    "lcov.info",
+    "ADDFILENAMEHERE.xml",
+    "coverage.xml",
+    "jacoco.xml",
+    "combined.txt",
+    "cover.json"
+  ],
+  "markiscodecoverage.searchCriteria": "combined.txt",
+  "editor.fontFamily": "'Roboto Mono', monospace",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#363636"
   },
+  // "editor.guides.bracketPairs": "active",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // vertical line
+  "editor.rulers": [120],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript"],
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -20,12 +38,9 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
-  "editor.lineNumbers": "relative",
+  // "editor.lineNumbers": "relative",
   "extensions.supportUntrustedWorkspaces": {},
   "vim.commandLineModeKeyBindingsNonRecursive": [],
-  "vscode-neovim.neovimExecutablePaths.win32": "C:\\Users\\cturgeon\\scoop\\apps\\neovim\\0.7.2\\bin\\nvim.exe",
-  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\cturgeon\\AppData\\Local\\nvim\\init.vim",
   "whichkey.sortOrder": "alphabetically",
   "whichkey.bindings": [
     {
@@ -35,11 +50,53 @@
       "command": "workbench.action.showCommands"
     },
     {
-      "key": "/",
-      "name": "comment",
+      "key": "c",
+      "name": "copilot suggest",
       "type": "command",
-      "command": "vscode-neovim.send",
-      "args": "<C-/>"
+      "bindings": [
+        {
+          "key": "p",
+          "name": "copilot suggest",
+          "type": "command",
+          "command": "editor.action.inlineSuggest.trigger"
+        },
+        {
+          "key": "g",
+          "name": "open completions panel",
+          "type": "command",
+          "command": "github.copilot.generate"
+        },
+        {
+          "key": "u",
+          "name": "previous inline suggestion",
+          "type": "command",
+          "command": "editor.action.inlineSuggest.showPrevious"
+        },
+        {
+          "key": "n",
+          "name": "next inline suggestion",
+          "type": "command",
+          "command": "editor.action.inlineSuggest.showNext"
+        },
+        {
+          "key": "t",
+          "name": "chat",
+          "type": "command",
+          "command": "inlineChat.start"
+        }
+      ]
+    },
+    {
+      "key": "k",
+      "name": "show hover",
+      "type": "command",
+      "command": "editor.action.showHover"
+    },
+    {
+      "key": "q",
+      "name": "quick fix",
+      "type": "command",
+      "command": "editor.action.quickFix"
     },
     {
       "key": "b",
@@ -351,7 +408,6 @@
         }
       ]
     },
-
     {
       "key": "m",
       "name": "minimap",
@@ -599,7 +655,46 @@
       "command": "workbench.action.toggleZenMode"
     }
   ],
-  "editor.minimap.enabled": false,
   "editor.cursorSurroundingLines": 8,
-  
+  "vscode-neovim.highlightGroups.highlights": {
+    "Directory": "vim",
+    "IncSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground",
+      "borderColor": "theme.editor.findMatchBorder"
+    },
+    "Search": {
+      "backgroundColor": "theme.editor.findMatchHighlightBackground",
+      "borderColor": "theme.editor.findMatchHighlightBorder"
+    },
+    "Visual": {
+      "backgroundColor": "theme.editor.selectionBackground"
+    },
+    "Conceal": "vim",
+    "Substitute": "vim"
+  },
+  "vscode-neovim.neovimExecutablePaths.darwin": "/Users/casey-turgeon/nvim-macos/bin/nvim",
+  "githubPullRequests.pullBranch": "never",
+  "git.ignoreRebaseWarning": true,
+  "window.zoomLevel": 2,
+  "workbench.colorTheme": "SynthWave '84",
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "stash-push:command",
+    "switch:command",
+    "pull:command"
+  ],
+  "editor.inlineSuggest.enabled": true,
+  "editor.stickyScroll.enabled": true,
+  "workbench.activityBar.location": "top",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.minimap.enabled": false,
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+  "git.confirmSync": false,
+  "opa.dependency_paths.opa": "/Users/casey-turgeon/opa",
+  "opa.dependency_paths.regal": "/Users/casey-turgeon/regal",
+  "opa.languageServers": ["regal"],
+  "diffEditor.ignoreTrimWhitespace": false
 }
