@@ -1,0 +1,31 @@
+{
+  "excludedUrls": "https://www.duolingo.com/",
+  "linkHintCharacters": "arstneio",
+  "detectByCursorStyle": false,
+  "scrollSize": 150,
+  "openTabUrl": "https://www.google.com",
+  "modifier": "",
+  "smoothScroll": true,
+  "scrollDuration": 25,
+  "transparentBindings": true,
+  "bindings": {
+      "hintToggle": "f",
+      "newTabHintToggle": "shift+f",
+      "scrollUp": "e",
+      "scrollDown": "n",
+      "scrollLeft": "",
+      "scrollRight": "",
+      "scrollUpHalfPage": "u",
+      "scrollDownHalfPage": "l",
+      "goToPageTop": "g g",
+      "goToPageBottom": "shift+g",
+      "goToFirstInput": "g i",
+      "goBack": "b",
+      "goForward": "shift+b",
+      "reload": "r",
+      "tabForward": "w",
+      "tabBack": "q",
+      "closeTab": "x",
+      "openTab": "t"
+  }
+}
